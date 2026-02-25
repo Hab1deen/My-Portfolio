@@ -40,7 +40,7 @@ export const fallbackProjects = [
         github_url: 'https://github.com/Hab1deen/LoginPage-Modern',
     },
     {
-        id: 4,
+        id: 3,
         category: 'mini',
         title: 'Weather App',
         description: 'แอปพยากรณ์อากาศ ดึงข้อมูลจาก API แบบ Real-time',
@@ -50,7 +50,7 @@ export const fallbackProjects = [
         github_url: 'https://github.com/Hab1deen/WeatherApp',
     },
     {
-        id: 3,
+        id: 4,
         category: 'capstone',
         title: 'EasyBill Online',
         description: 'ระบบออกใบเสนอราคาและใบแจ้งหนี้ออนไลน์ — โปรเจกต์จบการศึกษา พร้อมระบบ Authentication, จัดการลูกค้า, สร้างเอกสาร และ Dashboard',
@@ -61,4 +61,15 @@ export const fallbackProjects = [
         github_url: 'https://github.com/Hab1deen/final-project-frontend.git',
         github_backend_url: 'https://github.com/Hab1deen/final-project-backend.git',
     },
+    {
+        id: 5,
+        category: 'mini',
+        title: 'Snake Game',
+        description: 'เกมงูคลาสสิกที่เล่นบนเว็บเบราว์เซอร์ โดยควบคุมผ่านลูกศรบนคีย์บอร์ด',
+        role: 'Full-Stack Developer',
+        tech_stack: ['HTML', 'CSS', 'JavaScript'],
+        image_url: '/snake-game.png',
+        live_url: 'https://hab1deen.github.io/snake-game/',
+        github_url: 'https://github.com/Hab1deen/snake-game',
+    }
 ];
