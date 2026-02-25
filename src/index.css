@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans bg-slate-50 text-slate-800 transition-colors duration-300 antialiased selection:bg-accent selection:text-white;
+  }
+
+  html.dark body {
+    @apply bg-primary text-slate-200 selection:bg-focus selection:text-white;
+  }
+
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-focus;
+  }
+  
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-sm;
+  }
+  
+  .dark .glass {
+    @apply bg-secondary/70 backdrop-blur-md border border-white/10 shadow-xl;
+  }
+  
+  .glass-card {
+    @apply bg-white/50 backdrop-blur-sm border border-white/20 hover:border-accent/50 transition-all duration-300;
+  }
+  
+  .dark .glass-card {
+    @apply bg-tertiary/50 backdrop-blur-sm border border-white/5 hover:border-focus/50 transition-all duration-300;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full border-[3px] border-transparent bg-clip-padding;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  @apply bg-slate-700/80 hover:bg-slate-600 border-[3px] border-primary;
+}
+
+/* Legacy reveal animations - now using tailwind keyframes but keeping classes for compatibility if needed */
+.reveal {
+  @apply opacity-0 translate-y-8 transition-all duration-1000 ease-out;
+}
+
+.reveal.active {
+  @apply opacity-100 translate-y-0;
+}
